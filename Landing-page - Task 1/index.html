@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="font-awesome.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Underwater Adventure - Landing page</title>
+
+<script src="jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<!-- 
+    Codsoft Internship Projects
+    Task 1 Project Name Landing page - Underwater Adveture 
+    Author: N Mohammed affan 
+    LinkedIn profile: https://in.linkedin.com/in/nmohammedaffan
+ -->
+    <!-- Header -->
+<header>
+
+<a href="#" class="logo"><h1>logo</h1></a>
+
+<nav class="navbar">
+<ul>
+    <li><a href="#">home</a></li>
+    <li><a href="#">about</a></li>
+    <li><a href="#">contact</a></li>
+    <li><a href="#">blogs</a></li>
+    <li><a href="#">login</a></li>
+</ul>
+</nav>
+<div class="fa fa-bars"></div>
+
+</header>
+ <!-- header ends -->
+
+    <!-- home section starts -->
+<div class="container">
+    <div class="contain">
+        
+        <h1>underwater</h1>
+        <h2>adventure</h2>
+
+        <a href="#"><button>Join Now</button></a>
+
+        <div class="icons">
+            <a href="#" class="fa fa-facebook-f"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+        <div class="video-container">
+            <video src="Asset/vid1.mp4" autoplay muted loop class="vid1"></video>
+            <video src="Asset/vid2.mp4"autoplay muted loop class="vid2"></video>
+            <video src="Asset/vid3.mp4"autoplay muted loop class="vid3"></video>
+        </div>
+        
+        <div class="controls">
+            <div class="dots dot1"></div>
+            <div class="dots dot2"></div>
+            <div class="dots dot3"></div>
+        </div>
+
+    </div>
+</div>
+
+    <!-- home section ends -->
+ <!-- jquery parts starts -->
+<script>
+    $(document).ready(function(){
+        $('.fa-bars').click(function(){
+        $(this).toggleClass('fa-times');
+        $('.navbar').toggleClass('nav-toggle');
+        });
+      
+
+        $('.navbar').click(function(){
+        $(this).removeClass('nav-toggle');
+        $('.fa-bars').removeClass('fa-times');
+        });
+      
+        $('.dot1').click(function(){
+            $('.vid1').css('display','block');
+            $('.vid2').css('display','none');
+            $('.vid3').css('display','none');
+        });
+
+        $('.dot2').click(function(){
+            $('.vid1').css('display','none');
+            $('.vid2').css('display','block');
+            $('.vid3').css('display','none');
+        });
+        $('.dot3').click(function(){
+            $('.vid1').css('display','none');
+            $('.vid2').css('display','none');
+            $('.vid3').css('display','block');
+        });
+    });
+
+</script>
+
+
+</body>
+</html>
